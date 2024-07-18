@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GabryDev FAQ</title>
+
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+
+    body {
+        margin: 0;
+        padding: 0;
+        background-color: #121212;
+        text-align: center;
+        font-family: 'Arial', sans-serif;
+        color: #e0e0e0;
+    }
+
+    * {
+        font-family: "Roboto Mono", monospace;
+        font-optical-sizing: auto;
+
+    }
+
+    h1 {
+        text-shadow: 3px 3px 3px #8800ff;
+    }
+
+    #faq {
+        width: 80%;
+        margin: 20px auto;
+    }
+
+    .faq-item {
+        margin-bottom: 10px;
+    }
+
+    .faq-question {
+        width: 100%;
+        padding: 10px;
+        font-size: 1.2em;
+        cursor: pointer;
+        background: rebeccapurple;
+        border: none;
+        text-align: left;
+        color: #ffffff;
+        border-radius: 15px;
+    }
+
+    .faq-answer {
+        display: none;
+        padding: 10px;
+        color: #ffffff;
+        background-color: #000000;
+        border-radius: 15px;
+    }
+</style>
+
+<body>
+    <header>
+        <h1>Possible questions that could be asked of me</h1>
+    </header>
+    <section id="faq">
+        <div class="faq-item">
+            <button class="faq-question">What is your professional background?</button>
+            <div class="faq-answer">
+                <p>In the past I worked in other fields, including mechanics and telecommunications. <br>now 3 months to
+                    this part I'm dedicating myself to studying web development</p>
+            </div>
+        </div>
+        <div class="faq-item">
+            <button class="faq-question">What services do you offer?</button>
+            <div class="faq-answer">
+                <p>I am working to offer front-end web development services</p>
+            </div>
+        </div>
+        <div class="faq-item">
+            <button class="faq-question">how much experience do you have?</button>
+            <div class="faq-answer">
+                <p>I haven't found a job in the field yet, but I'm working hard on my own.</p>
+            </div>
+        </div>
+    </section>
+
+
+    <script>
+
+        let questions = document.querySelectorAll('.faq-question');
+
+        questions.forEach(function (question) {
+            question.addEventListener('click', function () {
+                let answer = question.nextElementSibling;
+                if (answer.style.display === 'block') {
+                    answer.style.display = 'none';
+                } else {
+                    answer.style.display = 'block';
+                }
+            });
+        });
+
+    </script>
+</body>
+
+</html>

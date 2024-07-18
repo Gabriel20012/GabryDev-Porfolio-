@@ -1,0 +1,471 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #121212;
+
+  font-family: 'Arial', sans-serif;
+  color: #e0e0e0;
+}
+
+* {
+  scroll-behavior: smooth;
+  font-family: "Roboto Mono", monospace;
+  font-optical-sizing: auto;
+}
+
+/*navigation*/
+ul {
+  position: sticky;
+  top: 10px;
+  z-index: 999;
+  margin-top: 15px;
+  display: flex;
+  gap: 5px;
+}
+
+li {
+  background-color: #2e2e2e;
+  
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+li:hover {
+  background-color: #444444;
+}
+
+li:nth-child(1) {
+  border-radius: 15px 0 0 15px;
+}
+
+li:nth-child(4) {
+  border-radius: 0 15px 15px 0;
+}
+
+a {
+  color: #ffffff;
+  position: relative;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 100%;
+  height: 3px;
+  background-color: #8800ff;
+  transform: scaleX(0);
+  transform-origin: bottom right;
+  transition: transform 0.3s ease-out;
+}
+
+a:hover {
+  color: #ffffff;
+}
+
+a:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+/*navigation*/
+
+/*Presention*/
+#pres-cont {
+  width: 100%;
+  min-height: 40vh;
+  
+  display: flex;
+}
+
+#name-skill-cont {
+  z-index: 1;
+  width: 50%;
+  min-height: 40vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.name-skill {
+  border-bottom: 1px solid #8800ff;
+  text-shadow: 3px 3px 3px #8800ff;
+  font-size: 3em;
+  
+}
+
+
+
+#code-draw-cont {
+  width: 50%;
+  min-height: 40vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.draw-1,
+.draw-2,
+.draw-3,
+.draw-4,
+.draw-5,
+.draw-6,
+.draw-7 {
+  width: 40%;
+  height: 5px;
+  border-radius: 15px;
+  margin: 5px 0;
+  transition: width 0.3s;
+}
+
+
+
+.draw-1 { background-color: aqua; }
+.draw-2 { background-color: #ff5500; width: 60%; }
+.draw-3 { background-color: #ffffff; width: 50%; }
+.draw-4 { background-color: aqua; }
+.draw-5 { background-color: #c8ff00; width: 50%; }
+.draw-6 { background-color: #ff6200; width: 70%; }
+.draw-7 { background-color: #8800ff; width: 30%; }
+
+
+
+
+
+
+
+
+#presentation-cont {
+  width: 100%;
+  min-height: 55vh;
+  display: flex;
+}
+
+.presentaion {
+  width: 50%;
+  min-height: 55vh;
+  border-bottom: 1px solid #a762ff;
+  border-radius: 0px 0px 0px 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.presentaion h3{
+  border-bottom: 1px solid #8800ff;
+  text-shadow: 3px 3px 3px #8800ff;
+  text-align: center;
+}
+
+.draw-cont-3 {
+  width: 50%;
+  min-height: 55vh;
+  border-top: 1px double #ffffff;
+  border-radius: 0px 15px 0px 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+/*Presention*/
+
+
+/*Projects*/
+#Projects-cont {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.container-p {
+  width: 100%;
+  height: 80vh;
+  display: grid;
+  gap: 20px;
+  padding: 20px;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.project {
+  padding: 20px;
+  border: 1px solid #8800ff;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s, background-color 0.3s;
+}
+
+.p1{
+  box-shadow:  5px 0px 0px 3px rgb(255, 240, 26);
+  border: 1px solid #8800ff;
+  background-image: url(pokemon.webp);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.p2{
+  box-shadow:  5px 0px 0px 3px rebeccapurple;
+  border: 1px solid #8800ff;
+  background-image: url(todoList.jpeg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.p3{
+  box-shadow:  5px 0px 0px 3px rgb(255, 255, 255);
+  border: 1px solid #8800ff;
+  background-image: url(dice.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.p1 h3 a{
+   background-color: #121212a0;
+   padding: 5px;
+   border-radius: 15px;
+   text-shadow: 1px 1px 1px rgb(255, 240, 26);
+}
+.p2 h3 a{
+  background-color: #1212126d;
+  padding: 5px;
+  border-radius: 15px;
+  text-shadow: 1px 1px 1px rgb(162, 79, 2);
+}
+
+.p3 h3 a{
+  background-color: #1212126d;
+  padding: 5px;
+  border-radius: 15px;
+  text-shadow: 1px 1px 1px #8800ff;
+}
+
+
+
+
+.project:hover {
+  transform: translateY(-10px);
+  background-color: #222222;
+}
+
+.project h3 {
+  border-radius: 15px;
+}
+
+.site-preview {
+  width: 100%;
+  height: 100%;
+  border: 1px solid #ccc;
+  border-radius: 15px;
+}
+
+
+
+.project-presentation {
+  width: 100%;
+  min-height: 20vh;
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.proj-pres-int {
+  width: 97%;
+  min-height: 20vh;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+    text-align: center;
+}
+
+.proj-pres-int h2 {
+  color: #ffffff;
+  border-bottom: 1px solid #8800ff;
+  text-shadow: 3px 3px 3px #8800ff;
+}
+/*Projects*/
+
+
+/*Skills*/
+
+
+.skills-container{
+  margin-top: 10px;
+
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.skills-container h2{
+  border-bottom: 1px solid #8800ff;
+  text-shadow: 3px 3px 3px #8800ff;
+}
+.skill-card{
+  width: 90% ;
+ 
+  height: 10vh;
+}
+
+.experience{
+  width: 100%;
+  height: 2vh;
+  border: 2px solid rebeccapurple;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  
+}
+
+.percent{
+  border-radius: 15px;
+}
+
+.percent-1{width: 60%; height: 2vh;  background-color: orangered;}
+.percent-2{width: 60%; height: 2vh;  background-color: rgb(89, 64, 255);}
+.percent-3{width: 50%; height: 2vh;  background-color: rgb(255, 240, 26);}
+.percent-4{width: 10%; height: 2vh;  background-color: rgb(26, 240, 255);}
+.percent-5{width: 10%; height: 2vh;  background-color: rgb(10, 209, 0);}
+.percent-6{width: 40%; height: 2vh;  background-color: rgb(255, 255, 255);}
+/*Skills*/
+
+
+/*Footer*/
+#contact-footer {
+  width: 100%;
+  min-height: 30vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  
+  border-top: 1px solid white;
+}
+
+
+.footer-container {
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ 
+  box-sizing: border-box;
+}
+
+.footer-content {
+  text-align: center;
+  color: white;
+}
+
+.footer-content h2 {
+  margin-bottom: 20px;
+  text-shadow: 3px 3px 3px #8800ff;
+  border-bottom: 1px solid #8800ff;
+}
+
+.footer-content p {
+  margin: 5px 0;
+}
+
+.social-icons {
+  margin-top: 20px;
+}
+
+.social-icons .icon {
+  margin: 0 10px;
+  color: white;
+  text-decoration: none;
+}
+
+.social-icons .icon:hover {
+  text-decoration: underline;
+}
+/*Footer*/
+
+
+.faq-section{
+  width: 100%;
+  height: 10vh;
+  background-color: red;
+}
+
+#Faq-btn{
+  margin: 10px;
+  border-radius: 15px;
+  border: none;
+  cursor: pointer;
+  padding: 5px;
+  font-size: 1.5rem;
+  text-shadow: 3px 3px 3px #8800ff;
+  color: white;
+  background-color: black;
+}
+#Faq-btn:hover{
+  transition: 0.5s ease-in;
+transform: scale(1.1);
+box-shadow: 1px 0px 0px 1px #8800ff;
+}
+
+
+/*Media query*/
+@media (max-width: 900px) {
+  .container-p {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+
+
+
+@media (max-width: 730px) {
+  #pres-cont{
+    margin-bottom: 20px;
+  }
+  #code-draw-cont, .draw-cont-3, .nav {
+   display: none;
+  }
+ 
+
+  #name-skill-cont{
+    width: 100%;
+  }
+
+  #presentation-cont{
+    justify-content: center;
+    align-items: center;
+  }
+
+  .presentaion{
+    width: 80%;
+    text-align: center;
+  }
+
+  #skills{
+    margin-top: 30px;
+  }
+}
+
+
+@media (max-width: 600px) {
+  .container-p {
+    grid-template-columns: 1fr;
+  }
+}
+/*Media query*/
